@@ -1,0 +1,191 @@
+
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+%\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------------------------------- 
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+%----------HEADING-----------------
+\begin{center}
+  {\Huge \textbf{Apoorv Sharma}} \\[6pt] % Your name centered and larger
+  \href{mailto:iamsharmaapoorv@gmail.com}{iamsharmaapoorv@gmail.com} 
+  $|$ \href{tel:+919629770677}{+91-9629770677} 
+  $|$ \href{https://www.linkedin.com/in/sharma-apoorv/}{LinkedIn: sharma-apoorv} 
+  $|$ \href{https://github.com/iamsharmaapoorv/}{GitHub: iamsharmaapoorv}
+\end{center}
+
+
+
+%-----------EXPERIENCE-----------------
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Amazon Web Services}{Bengaluru, India}
+      {Software Developer 2 - OpenSearch}{July 2021 - }
+     \resumeItemListStart
+        \resumeItem{OpenSearch containerization} {Containerized the OpenSearch process. This allows version updates to be performed in-place instead of requiring blue-green deployments which take time, duplicate infra, pose data loss risk}
+          \begin{itemize}[
+                topsep=.2pt,
+                itemsep=.2pt,
+                parsep=0pt,
+                partopsep=0pt
+            ]
+            \item Updates now consume constant time instead of being dependent on the data store size, decreasing from potentially 12 error prone hours to 1 hour per cluster. 
+            \item The newfound isolation also allows for new features to be built into the service, e.g., custom dictionaries. Cost savings for customers - upwards of 2.4M USD. 
+          \end{itemize}
+
+        \resumeItem{AutoSync} {Programmed sync of commits GitHub and internal GitFarm for OpenSearch and its plugins. Automated new branch syncs, commit conflict resolutions, ticketing for manual intervention, building artifacts.}
+          \begin{itemize}[
+                topsep=.2pt,
+                itemsep=.2pt,
+                parsep=0pt,
+                partopsep=0pt
+            ]
+            \item  Brought release cadence of 30 versions down from 6 months to 2 months.
+          \end{itemize}
+
+         \resumeItem {Disk Optimization} {Optimized the disk space of the 20 GB root volume of Amazon OpenSearch Service clusters by 10\%! Generated directed acyclic graph to deduplicate dependencies and locked down the capacity allocated to system logs, tuning local retention and rotation.}
+            
+          \begin{itemize}[
+                topsep=.2pt,
+                itemsep=.2pt,
+                parsep=0pt,
+                partopsep=0pt
+            ]
+            \item Projected annual cost savings: \$5.7M.
+            \end{itemize}
+  
+         \resumeItem {Verbose logging} {Released an improvement to the company-wide default amazon logger that includes line number, file name of each logged statement. This greatly enhances the debugging experience by felicitating logic tracking.}
+    
+         \resumeItem {Ownership} {Assumed ownership of all projects. This includes pitching the project to SDMs and PEs, designing, implementing and deploying solutions globally. Mentored 1 developer to promotion and 2 interns to conversion.}
+    
+         %\resumeItem {Operational Excellence} {Maintained the highest levels of service to customers with on-calls and active interactions.}
+     \resumeItemListEnd
+     
+    \resumeSubheading
+      {Societe Generale}{Bengaluru, India}
+      {Specialist Software Engineer}{June 2017 - May 2021}
+  
+      \resumeItemListStart
+        \resumeItem{Reboot as a service}
+          {Rebootaas is a scalable asynchronous service to automate execution of commands on a batch of upto a 1000 hosts all at once in parallel, eliminating manual engineer maintenance.}
+
+            
+        \resumeItem{Decom Automation}{Automated the decommission process of servers/services, including config collection, pre-checks, and workflow creation in inventory database.}
+          
+        \resumeItem{JSON Web Token for authentication and authorization}
+                   {Provided a much needed alternative to the company’s internal authorization system which doesn’t allow automation.}
+    
+
+        \resumeItem{PWStore}{A service that allows clients and stakeholders to store credentials and any other confidential data that
+is used in services without the need to involve developers. All the data is stored in encrypted form.}
+
+        \resumeItem{Build automation}{Automated end-to-end provisioning of physical machines and VMs, covering client request-sheet validation, new IP registration, deployment file generation, and first-boot OS setup.}
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Tata Consultancy Services}{Noida, India}
+      {Software Developer Intern}{June 2016 - July 2016}
+      \resumeItemListStart
+        \resumeItem{Code Quality}
+          {In charge of code review and functional testing. Debugging for E-forms in active deployment. Part
+  of IRD and E-form design brainstorming and creation.}
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology}{Vellore, India}
+      {B.Tech. Computing Science and Engineering;  CGPA: 8.4/10.0}{July 2013 - May 2017}
+  \resumeSubHeadingListEnd
+
+
+
+%--------SKILLS------------
+\section{Skills}
+\begin{itemize}[leftmargin=*, itemsep=-3pt]
+    \small
+   \item \textbf{Programming:} Python, C++, Java, TypeScript, JavaScript, SQL
+   \item \textbf{Cloud \& DevOps:} AWS (EC2, EBS, S3, OpenSearch, Lambda, IAM, CloudFormation, CDK, CloudWatch), Docker, Jenkins, Git, CI/CD, Kafka
+   \item \textbf{Databases:} MySQL, PostgreSQL, DynamoDB, MongoDB, NoSQL, Cassandra, GeoHashing, BKD Trees
+   \item \textbf{Systems \& Architecture:} Distributed Systems, System Design, Microservices, Event-Driven Architecture, OOPS, UNIX/Linux, 2 Phase Commit, SAGA pattern
+   \item \textbf{Practices:} Agile, Test-Driven Development (TDD), REST, Observability (Logging, Metrics, Tracing), Estimation using HyperLogLog, Count-Min-Sketch, Bloom filters
+   \item \textbf{Machine Learning:} Neural networks, Transformers, Regression, ML engineering, ML system design, Vectorization, RAG
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
+
